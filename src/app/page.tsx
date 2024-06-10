@@ -41,7 +41,7 @@ export default function Home() {
       try {
         const response = await fetch(`https://api.github.com/orgs/${sanitizedQuery}`, {
           headers: {
-            'Authorization': 'token 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',
+            'Authorization': `${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
           }
         });
 
